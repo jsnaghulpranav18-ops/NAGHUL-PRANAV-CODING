@@ -53,6 +53,8 @@ a=float(input("enter temp in celcius:"))
 #nettprofit=r-c-os
 #grossprofit=r-c
 #grossprofitpercentage=nettprofit/r*100
+#print("the nett profit in rupees is:",nettprofit)
+#print("the gross profit in rupees is:",grossprofit)
 
 ##a=int(input("enter the value of a:"))   
 ##if(a<900):
@@ -60,11 +62,3 @@ a=float(input("enter temp in celcius:"))
 ##else:
 ##    print("btw")
 
-#print("the nett profit in rupees is:",nettprofit)
-#print("the gross profit in rupees is:",grossprofit)
-
-a=int(input("enter the number of days:"))
-
-
-#print("the gross profit percentage is :",grossprofitpercentage)
-#print ("ThankYou")NG

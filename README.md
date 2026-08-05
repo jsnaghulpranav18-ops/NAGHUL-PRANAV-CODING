@@ -62,3 +62,15 @@ a=float(input("enter temp in celcius:"))
 ##else:
 ##    print("btw")
 
+##a=int(input("enter the values of a :"))
+##if(a%2==0):
+##      print("the number is even:")
+##else:
+##      print("the given number is odd:")
+
+
+
+
+
+
+

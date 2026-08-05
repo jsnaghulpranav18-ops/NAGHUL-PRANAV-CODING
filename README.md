@@ -41,6 +41,7 @@ a=float(input("enter temp in celcius:"))
 ##n1=n1+n2
 ##n2=n2+n3
 ##print("after swapping:", n1,n2,n3,)
+
 #a=int(input("enter temp in celcius:"))
 #f=a*9/5+32
 #print("the entered temp is",a)

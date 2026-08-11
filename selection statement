@@ -223,5 +223,3 @@
 ##else :
 ##    grade = 'E'
 ##print("For marks", m, "the Grade is", grade)
-
-thankyou!

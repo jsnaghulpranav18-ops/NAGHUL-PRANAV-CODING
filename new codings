@@ -63,3 +63,141 @@ print()
 
 score = int(score / len(questions) * 100)
 print(f"Your score is: {score}%")
+
+
+
+ n = int(input("enter number of employees: "))
+
+c26_35 = 0
+c36_45 = 0
+c46_55 = 0
+other = 0
+i = 1
+
+while i <= n:
+    print("enter age of employee", i)
+    age = int(input())
+
+    if age >= 26 and age <= 35:
+        c26_35 = c26_35 + 1
+    elif age >= 36 and age <= 45:
+        c36_45 = c36_45 + 1
+    elif age >= 46 and age <= 55:
+        c46_55 = c46_55 + 1
+    else:
+        other = other + 1
+
+    i = i + 1
+
+
+
+ import time
+import winsound
+
+seconds = int(input("Enter time in seconds: "))
+
+while seconds > 0:
+    print(seconds)
+    time.sleep(1)
+    seconds = seconds - 1
+
+print("Time's up!")
+# sound effect
+for _ in range(60):
+    
+   
+    winsound.Beep(374, 476)
+    time.sleep(0)
+
+
+
+
+####hang man
+##
+##
+### Hangman in Python
+##
+### Hangman in Python
+##import random
+##
+##hangman_art = {0: ("   ",
+##                                   "   ",
+##                                   "   "),
+##                             1: (" o ",
+##                                   "   ",
+##                                   "   "),
+##                             2: (" o ",
+##                                   " | ",
+##                                   "   "),
+##                             3: (" o ",
+##                                   "/| ",
+##                                   "   "),
+##                             4: (" o ",
+##                                  "/|\\",
+##                                   "   "),
+##                              5: (" o ",
+##                                   "/|\\",
+##                                   "/  "),
+##                              6: (" o ",
+##                                   "/|\\",
+##                                   "/ \\")}
+##
+##words = ("aardvark", "alligator", "alpaca", "ant", "anteater", "antelope", "ape", "armadillo", "baboon", "badger", "bat", "bear", "beaver", "bee", "bison", "boar", "buffalo", "butterfly", "camel", "capybara", "caribou", "cat", "caterpillar", "cattle", "chamois", "cheetah", "chicken", "chimpanzee", "chinchilla", "chough", "clam", "cobra", "cockroach", "cod", "coyote", "crab", "crane", "crocodile", "crow", "curlew", "deer", "dinosaur", "dog", "dogfish", "dolphin", "donkey", "dormouse", "dotterel", "dove", "dragonfly", "duck", "dugong", "dunlin", "eagle", "echidna", "eel", "eland", "elephant",  "elk", "emu", "falcon", "ferret", "finch", "fish", "flamingo", "fly", "fox", "frog", "gaur", "gazelle", "gerbil", "giraffe", "gnat", "gnu", "goat", "goldfinch", "goldfish", "goose", "gorilla", "goshawk", "grasshopper", "grouse", "guanaco", "gull", "hamster", "hare", "hawk", "hedgehog", "heron", "herring", "hippopotamus", "hornet", "horse", "human", "hummingbird", "hyena", "ibex", "ibis", "jackal", "jaguar", "jay", "jellyfish", "kangaroo", "kingfisher", "koala", "kookabura", "kouprey", "kudu", "lapwing", "lark", "lemur", "leopard", "lion", "llama", "lobster", "locust", "loris", "louse", "lyrebird", "magpie", "mallard", "manatee", "mandrill", "mantis", "marten", "meerkat", "mink", "mole", "mongoose", "monkey", "moose", "mosquito", "mouse", "mule", "narwhal", "newt", "nightingale", "octopus", "okapi", "opossum", "oryx", "ostrich", "otter", "owl", "ox", "oyster", "panda", "panther", "parrot", "partridge", "peafowl", "pelican", "penguin", "pheasant", "pig", "pigeon", "polar-bear", "pony", "porcupine", "porpoise", "quail", "quelea", "quetzal", "rabbit", "raccoon", "rail", "ram", "rat", "raven", "red-deer", "red-panda", "reindeer", "rhinoceros", "rook", "salamander", "salmon", "sand-dollar", "sandpiper", "sardine", "scorpion", "seahorse", "seal", "shark", "sheep", "shrew", "skunk", "snail", "snake", "sparrow", "spider", "spoonbill", "squid", "squirrel", "starling", "stingray", "stoat", "stork", "swallow", "swan", "tapir", "tarsier", "termite", "tiger", "toad", "trout", "turkey", "turtle", "viper", "vulture", "wallaby", "walrus", "wasp", "weasel", "whale", "wildcat", "wolf", "wolverine", "wombat", "woodcock", "woodpecker", "worm", "wren", "yak", "zebra")
+##
+##def display_man(wrong_guesses):
+##    print("****")
+##    for line in hangman_art[wrong_guesses]:
+##        print(line)
+##    print("****")
+##
+##def display_hint(hint):
+##    print(" ".join(hint))
+##
+##def display_answer(answer):
+##    print(" ".join(answer))
+##
+##def main():
+##    answer = random.choice(words)
+##    hint = ["_"] * len(answer)
+##    wrong_guesses = 0
+##    guessed_letters = set()
+##    is_running = True
+##
+##    while is_running:
+##        display_man(wrong_guesses)
+##        display_hint(hint)
+##        guess = input("Enter a letter: ").lower()
+##
+##        if len(guess) != 1 or not guess.isalpha():
+##            print("Invalid input")
+##            continue
+##
+##        if guess in guessed_letters:
+##            print(f"{guess} is already guessed")
+##            continue
+##
+##        guessed_letters.add(guess)
+##
+##        if guess in answer:
+##            for i in range(len(answer)):
+##                if answer[i] == guess:
+##                    hint[i] = guess
+##        else:
+##            wrong_guesses += 1
+##
+##        if "_" not in hint:
+##            display_man(wrong_guesses)
+##            display_answer(answer)
+##            print("YOU WIN!")
+##            is_running = False
+##        elif wrong_guesses >= len(hangman_art) - 1:
+##            display_man(wrong_guesses)
+##            display_answer(answer)
+##            print("YOU LOSE!\nbetter luck next time")
+##            is_running = False
+##
+##if _name_ == "_main_":
+##    main()
+
+
+

@@ -1,0 +1,28 @@
+n = int(input("enter number of employees: "))
+
+c26_35 = 0
+c36_45 = 0
+c46_55 = 0
+other = 0
+i = 1
+
+while i <= n:
+    print("enter age of employee", i)
+    age = int(input())
+
+    if age >= 26 and age <= 35:
+        c26_35 = c26_35 + 1
+    elif age >= 36 and age <= 45:
+        c36_45 = c36_45 + 1
+    elif age >= 46 and age <= 55:
+        c46_55 = c46_55 + 1
+    else:
+        other = other + 1
+
+    i = i + 1
+
+print("employees between 26-35 = ", c26_35)
+print("employees between 36-45 = ", c36_45)
+print("employees between 46-55 = ", c46_55)
+print("employees outside the range = ", other)
+ 
